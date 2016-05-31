@@ -17,7 +17,7 @@ class CreateConceptsTable extends Migration
 
             $table->string('codigo');
             $table->string('descripcion');
-            $table->string('porcentaje');
+            $table->decimal('porcentaje', 10, 2);
             $table->enum('tipo', ['asignacion', 'deduccion']);
             $table->integer('id_user');
             $table->integer('update_user');

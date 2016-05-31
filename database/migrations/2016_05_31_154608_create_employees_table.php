@@ -17,7 +17,7 @@ class CreateEmployeesTable extends Migration
             // Personal
             $table->string('nombre');
             $table->string('apellido');
-            $table->string('ci');
+            $table->decimal('ci', 10, 0);
             $table->integer('edad');
             $table->text('direccion');
             $table->string('tlf');
@@ -34,9 +34,9 @@ class CreateEmployeesTable extends Migration
             $table->string('registroivss');
             $table->date('fecha_ivss');
             $table->enum('tipo', ['accionista', 'empleado']);
-            $table->string('sueldo');
-            $table->string('sueldo_otro');
-            $table->string('bono_a');
+            $table->decimal('sueldo', 12, 2);
+            $table->decimal('sueldo_otro', 12, 2);
+            $table->decimal('bono_a', 12, 2);
             $table->enum('estatus', ['activo', 'retirado', 'despedido', 'reposo']);
             $table->integer('id_user');
             $table->integer('update_user');

@@ -58,8 +58,12 @@ Route::resource('admin', 'AdminController');
 
 // Users
 Route::resource('users', 'UsersController');
- 
+
+// Company
+Route::resource('company', 'CompanyController');
 // Employees
 Route::resource('employees', 'EmployeesController');
 // Concepts
 Route::resource('concepts', 'ConceptsController');
+// Receipts
+Route::resource('receipts', 'ReceiptsController');
